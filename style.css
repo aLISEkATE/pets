@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1500x600'); /* Change to relevant image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.cta-button:hover {
+    background-color: #E64A19;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.stat {
+    text-align: center;
+    width: 30%;
+}
+
+.stat h3 {
+    font-size: 30px;
+    color: #FF5722;
+}
+
+.help-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.option {
+    width: 30%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.blog-posts article {
+    width: 48%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Puzzle Game Styling */
+#puzzle-game {
+    background-color: #FFF3E0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: #E0F7FA;
+    border: 2px solid #00ACC1;
+    border-radius: 10px;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid #00ACC1;
+    border-radius: 5px;
+}
+
+#reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF5722;
+    color: white;
+    border-radius: 5px;
+}
+
+#reset-btn:hover {
+    background-color: #E64A19;
+}
