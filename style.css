@@ -1,13 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Default Light Mode */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -37,25 +33,64 @@ header nav ul li a {
     font-size: 16px;
 }
 
-.hero {
-    background-image: url('https://via.placeholder.com/1500x600'); /* Change to relevant image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f7f7f7;
 }
 
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+body.dark-mode header {
+    background-color: #222;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+body.dark-mode header nav ul li a {
+    color: #f7f7f7;
 }
 
+/* Button Style for Mode Toggle */
+.mode-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 15px;
+    transition: transform 0.3s;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Additional styling for your content sections, images, etc. */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 .cta-button {
     background-color: #FF5722;
     color: white;
@@ -140,46 +175,169 @@ footer {
 }
 
 /* Puzzle Game Styling */
-#puzzle-game {
-    background-color: #FFF3E0;
-    padding: 40px 20px;
+.info {
+    position: relative;
+    font-family: Arial;
+    margin: 10px;
     text-align: center;
-}
-
-.puzzle-board {
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  
+  #title {
+    font-size: 20px;
+  }
+  
+  #rest2 {
+    font-size: 13px;
+  }
+  
+  #images {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(5, 100px); /* 5 columns of 200px */
     gap: 10px;
     justify-content: center;
-    margin-top: 30px;
-    position: relative;
-    width: 350px;
-    height: 350px;
-    background-color: #E0F7FA;
-    border: 2px solid #00ACC1;
-    border-radius: 10px;
-}
-
-.puzzle-piece {
-    width: 100px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  img {
     height: 100px;
-    background-size: cover;
-    background-position: center;
+    width: 100px;
+    object-fit: cover; /* Ensure images fit inside the div */
+  }
+  
+  /* Styling for the draggable pieces */
+  #drag4,
+  #drag5,
+  #drag6,
+  #drag7,
+  #drag8,
+  #drag9,
+  #drag10,
+  #drag11,
+  #drag12,
+  #drag13,
+  #drag14,
+  #drag15,
+  #drag16,
+  #drag17,
+  #drag18 {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
     cursor: pointer;
-    border: 2px solid #00ACC1;
-    border-radius: 5px;
+    background-size: contain; /* Ensures the whole image fits */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image within the div */
+  }
+  #drag4 {
+    background-image: url("piece_0_0.png");
+  }
+  #drag5 {
+    background-image: url("piece_0_1.png");
+  }
+  
+  #drag6 {
+    background-image: url("piece_0_2.png");
+  }
+  
+  #drag7 {
+    background-image: url("piece_0_3.png");
+  }
+  
+  #drag8 {
+    background-image: url("piece_0_4.png");
+  }
+  
+  #drag9 {
+    background-image: url("piece_1_0.png");
+  }
+  
+  #drag10 {
+    background-image: url("piece_1_1.png");
+  }
+  
+  #drag11 {
+    background-image: url("piece_1_2.png");
+  }
+  
+  #drag12 {
+    background-image: url("piece_1_3.png");
+  }
+  
+  #drag13 {
+    background-image: url("piece_1_4.png");
+  }
+  
+  #drag14 {
+    background-image: url("piece_2_0.png");
+  }
+  
+  #drag15 {
+    background-image: url("piece_2_1.png");
+  }
+  
+  #drag16 {
+    background-image: url("piece_2_2.png");
+  }
+  
+  #drag17 {
+    background-image: url("piece_2_3.png");
+  }
+  
+  #drag18 {
+    background-image: url("piece_2_4.png");
+  }
+  
+  
+  .container1 {
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Puzzle box takes available space, Timer box fixed width */
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
 }
 
-#reset-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #FF5722;
-    color: white;
-    border-radius: 5px;
-}
 
-#reset-btn:hover {
-    background-color: #E64A19;
+.timer-box {
+    text-align: center;
 }
+  /* Styling for the drop zones (5x3 grid) */
+  #text {
+    display: grid;
+    grid-template-columns: repeat(5, 100px); /* 5 columns */
+    grid-template-rows: repeat(3, 100px); /* 3 rows */
+    gap: 10px;
+    width: 860;
+    height: 325px;
+    background:  grey;
+    border: 5px solid black;
+    margin: auto;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  #text div {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border: 1px dashed gray;
+    background-color: #eaeaea;
+  }
+  
+  #text div:hover {
+    background-color: #f0f0f0; /* Add hover effect for drop zones */
+  }
+  
+ 
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+ 

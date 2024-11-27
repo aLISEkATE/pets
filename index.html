@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Raise awareness about pet abandonment and how you can help.">
     <title>Stop Pet Abandonment</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -27,117 +27,160 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Every Pet Deserves a Home</h2>
-            <p>Join the fight against pet abandonment and give them a second chance.</p>
-            <a href="#the-issue" class="cta-button">Learn More</a>
-            <a href="#get-involved" class="cta-button">Get Involved</a>
-        </div>
-    </section>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button id="mode-toggle" class="mode-toggle">🌙</button>
+    </header>
+
 
     <!-- The Issue Section -->
     <section id="the-issue">
         <div class="content-container">
-            <h2>The Harsh Reality of Pet Abandonment</h2>
-            <p>Over 3 million pets are abandoned each year, with many left on the streets to fend for themselves.</p>
+            <h1>Pamestība sāp. Mīlestība glābj.</h1>
+            <p>Ziemassvētku laiks ir brīdis, kad īpaši izjūtam mīlestības, rūpju un dāvināšanas nozīmi. Mājdzīvnieki - mūsu uzticamākie draugi - sniedz mums beznosacījumu mīlestību, bet daudzi no tiem cieš no pamestības un vientulības. Šajos svētkos aicinām ikvienu atcerēties arī par tiem, kuri mūs uztver kā visu savu pasauli! Parūpēsimies, lai neviens dzīvnieks nepaliek novārtā, un kopā radīsim pasauli, kurā mīlestība un rūpes tiek ikkatram, arī četrkājainajiem ģimenes locekļiem.</p>
             <div class="stats">
                 <div class="stat">
-                    <h3>3 Million+</h3>
-                    <p>Pets abandoned annually</p>
+                    <h3>Saikne un uzticība</h3>
+                    <p>Dzīvnieki sniedz beznosacījumu mīlestību un uzticību, un tas ir mūsu pienākums šo uzticību nesagraut.</p>
                 </div>
                 <div class="stat">
-                    <h3>40%</h3>
-                    <p>Of pets in shelters are never adopted</p>
+                    <h3>Atbildība</h3>
+                    <p>Mājdzīvnieks ir ģimenes loceklis, kas ir pilnībā atkarīgs no sava saimnieka.</p>
                 </div>
                 <div class="stat">
-                    <h3>50%</h3>
-                    <p>Of abandoned pets are left to die or suffer in harsh conditions</p>
+                    <h3>Veselība un drošība</h3>
+                    <p>Pamesti dzīvnieki ir pakļauti bada, slimību un plēsēju uzbrukumiem, kas apdraud viņu dzīvību.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How You Can Help Section -->
     <section id="get-involved">
         <div class="content-container">
-            <h2>How You Can Help</h2>
             <div class="help-options">
-                <div class="option">
-                    <h3>Adopt a Pet</h3>
-                    <p>Give a homeless pet the love and care they deserve. Visit a shelter near you.</p>
-                    <a href="https://www.petfinder.com" target="_blank" class="cta-button">Adopt Now</a>
+                <div class="stat">
+                    <h3>Ietekme uz sabiedrību</h3>
+                    <p>Pamesti mājdzīvnieki bieži kļūst par klaiņojošiem dzīvniekiem, radot sabiedrības drošības riskus.</p>
+                  
                 </div>
-                <div class="option">
-                    <h3>Donate</h3>
-                    <p>Your donations help provide food, shelter, and medical care for abandoned pets.</p>
-                    <button class="cta-button" onclick="donate()">Donate Now</button>
+                <div class="stat">
+                    <h3>Morālās vērtības</h3>
+                    <p>Rūpes par mājdzīvnieku atspoguļo mūsu cilvēcību un empātiju pret dzīvo radību.</p>
+                   
                 </div>
-                <div class="option">
-                    <h3>Volunteer</h3>
-                    <p>Get involved by volunteering at local shelters and helping animals in need.</p>
-                    <a href="#contact" class="cta-button">Volunteer</a>
+                <div class="stat">
+                    <h3>Likums</h3>
+                    <p>Dzīvnieku atstāšana novārtā ir likuma pārkāpums.</p>
+                   
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog">
-        <div class="content-container">
-            <h2>Success Stories</h2>
-            <div class="blog-posts">
-                <article>
-                    <h3>Meet Bella: From Abandoned to Beloved</h3>
-                    <p>Bella was found abandoned on the street. With love and care, she found her forever home.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-                <article>
-                    <h3>Adopting After a Loss</h3>
-                    <p>See how adopting a pet can help heal your heart and give another animal a second chance.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-            </div>
-        </div>
-    </section>
+ <!-- Collapsible FAQ Section -->
+<section id="faq">
+    <button class="accordion">Ko apsvērt, pirms mājdzīvnieka iegādes?</button>
+<div class="panel">
+<ul>
+  <li>Rūpes par dzīvnieku ir ilgtermiņa. Piemēram, suņi un kaķi dzīvo 10 - 20 gadus.</li>
+  <li>Mājdzīvniekam nepieciešama ikdienas uzmanība. Ko iesāksiet, ja dosieties ceļojumā?</li>
+  <li>Ir nepieciešamas finanses barošanai. Turklāt arī mājdzīvnieki mēdz saslimt, un tiem nav bezmaksas veselības aprūpe.</li>
+</ul>
+</div>
+
+
+<button class="accordion">Ko iesākt, ja tomēr nevarat vairs parūpēties?</button>
+<div class="panel">
+    <ul>
+        <li>Atcerieties, ka dzīvnieks nav lieta, bet gan dzīva radība!</li>
+        <li>Vēlams censties atrast jaunas, mīlošas mājas pie cilvēkiem, kurus pazīstat.</li>
+        <li>Konsultējaties ar dzīvnieku patversmēm.</li>
+        <li>Nākošos saimniekus vai patversmi informējiet par patieso dzīvnieka veselības stāvokli.</li>
+      </ul>
+</div>
+
+<button class="accordion">Kā rīkoties, ja pamanat pamestu mājdzīvnieku?</button>
+<div class="panel">
+    <ul>
+        <li>Pārliecinieties par situāciju - dažkārt saimnieks ir tālāk nekā vajadzētu būt.</li>
+        <li>Par prioritāti ņemot savu drošību, mēģiniet dzīvnieku piesaukt un noskaidrot, vai ir kāda norāde par īpašnieku (piemēram, piekariņš pie kaklasiksnas).</li>
+        <li>Ja dzīvnieks labprātīgi nenāk pie Jums, necentieties to ķert un piespiest!</li>
+        <li>Sazinieties ar tuvāko patversmi vai zvaniet policijai uz 112.</li>
+      </ul>
+</div>
+</section>
 <!-- Puzzle Game Section -->
 <section id="puzzle-game">
-    <div class="content-container">
-        <h2>Help Us Complete the Puzzle!</h2>
-        <p>Drag and drop the puzzle pieces to complete the image of a pet in need of a home.</p>
-        <div id="puzzle-board" class="puzzle-board">
-            <!-- Puzzle pieces will be inserted here dynamically -->
-        </div>
-        <button id="reset-btn" class="cta-button">Reset Puzzle</button>
+    <div class="info">
+        <div id="title">PUZZLE</div>
+        <div id="rest">Drag and drop the colored pieces on the puzzle below. (better images are on their way) </div>
+        <div id="rest2">You can put multiple pieces in the same area but you can't interchange them, only the last one you put will be accessible.</div>
     </div>
-</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="content-container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, want to volunteer, or just want to learn more, contact us today!</p>
-            <form action="#">
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
+    <div id="images">
+        <div id="drag4" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag5" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag6" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag7" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag8" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag9" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag10" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag11" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag12" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag13" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag14" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag15" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag16" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag17" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+        <div id="drag18" class="drag-piece" draggable="true" ondragstart="drag(event)"></div>
+    </div>
+
+    <div class="container1">
+        <div id="text">
+            <div id="div1" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div2" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div3" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div4" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div5" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div6" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div7" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div8" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div9" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div10" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div11" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div12" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div13" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div14" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div15" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+
+        <div class="timer-box">
+            <form method="post" action="save_puzzle_result.php">
+                <div id="timer-display">00:00</div>
+                <input type="text" id="timer-name" placeholder="Enter timer name or type" />
+                <button id="start-btn" type="button">Start</button>
+                <button id="end-btn" type="button" disabled>End</button>
+                <button id="save-btn">Save</button>
             </form>
         </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Stop Pet Abandonment. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="#" class="social-icon">FB</a>
-            <a href="#" class="social-icon">IG</a>
-            <a href="#" class="social-icon">TW</a>
-        </div>
-    </footer>
-
-
-
+    </div>
+</section>
+<section></section>
+<div class="leaderboard">
+    <h2>Leaderboard</h2>
+    <table id="leaderboard-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Leaderboard entries will be populated here -->
+        </tbody>
+    </table>
+</div>
+</section>
     <script src="script.js"></script>
 </body>
 
